@@ -1,16 +1,22 @@
 // Constants
 
-console.log("keep it secret, keep it")
 
 // Initial player's score
+const INITIAL_SCORE = 0;
 // Score needed to win
-// Initial count of lives
-// Maximum allowable lives
+const WINNING_SCORE = 5;
+// Initial count of lives set to 5
+const INITIAL_LIVES = 5; 
+// max losses 
+const MAX_LOSSES = 5; 
 // ID of the game board element
+const GAME_BOARD_ID = "game-board";
 // ID of the start button element
+const START_BUTTON_ID = "start-button";
 // ID of the score display element
+const SCORE_DISPLAY_ID = "score";
 // ID of the lives display element
-
+const LIVES_DISPLAY_ID = "lives";
 
 
 
