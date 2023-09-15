@@ -50,37 +50,52 @@ startButton.addEventListener("click", initializeGame);
 // Functions
 
 
-// Initialize the game state
-// Reset the score to the initial value
-// Reset lives to the initial value
-// Set the game as active
-// Disable the start button to prevent multiple game starts
-// Hide the start button
-// Clear the game board
-// Render the game state onto the DOM
-
-
-
+// Initialize the game state, returns everything to a default state 
+function initializeGame(){
+    // Reset the score to the initial value
+    score = INITIAL_SCORE;
+    // Reset lives to the initial value
+    lives = INITIAL_LIVES;
+    // Disable the start button to prevent multiple game starts
+    startButton.disabled = true; 
+    // Hide the start button
+    startButton.style.display = "none"
+    // Clear the game board
+    gameBoard.innerHTML = ""
+    // Render the game state onto the DOM
+    render();
+}
 
 // Render the game state
-// Set the score display to the current score
-// Set the lives display to the current lives
-// Create and replace two new game tile pairs
-
-
+function render(){
+    console.log("I'm in the render function")
+    // Set the score display to the current score
+    scoreDisplay.innerText = `Score: ${score}`; 
+    // Set the lives display to the current lives
+    livesDisplay.innerText = `Lives: ${lives}`; 
+    // Create and replace two new game tile pairs
+    createTilePair();
+}
 
 
 // Function to create and replace two game tiles (one positive and one negative) on the game board
-// Check if the game is active
-// Remove all existing tiles on the game board
-// Create variables for tile1 and tile2
-// Do some code while a certain condition is true
-// Call a helper function to create a game tile and assign to tile1
-// Call a helper function to create a game tile and assign to tile2
-// While the textContent of tile 1 is not equal to the textContent of tile 2
-// Append the new tiles to the game board
-
-
+function createTilePair(){
+    // Remove all existing tiles on the game board
+    gameBoard.innerHTML = "";
+    // Create variables for tile1 and tile2
+    let tile1;
+    let tile2; 
+    // Do some code while a certain condition is true
+    do {
+        // Call a helper function to create a game tile and assign to tile1
+        tile1 = createGameTile();
+        // Call a helper function to create a game tile and assign to tile2
+        tile2 = createGameTile();
+        // While the innerText of tile 1 is not equal to the innerText of tile 2
+    } while (tile1.innerText === tile2.innerText);
+    // Append the new tiles to the game board
+    gameBoard.append(tile1, tile2)
+}
 
 
 // Function to create a game tile (reward or penalty)
@@ -97,8 +112,6 @@ startButton.addEventListener("click", initializeGame);
 // Return the tile
 
 
-
-
 // Handle reward tile clicks function
 // Accept the tile as an argument
 // Check if the game is active
@@ -111,8 +124,6 @@ startButton.addEventListener("click", initializeGame);
 // Call the endGame function and pass true
 // Else
 // Update the score display and create new tiles after resetting color (render)
-
-
 
 
 // Handle penalty tile clicks function
