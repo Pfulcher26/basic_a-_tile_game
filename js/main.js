@@ -1,5 +1,6 @@
 // Constants
 
+console.log("keep it secret, keep it")
 
 // Initial player's score
 // Score needed to win
