@@ -43,7 +43,7 @@ const livesDisplay = document.getElementById(LIVES_DISPLAY_ID);
 
 
 // Event listener for the start button
-
+startButton.addEventListener("click", initializeGame);
 
 
 
