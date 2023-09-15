@@ -1,6 +1,5 @@
 // Constants
 
-
 // Initial player's score
 const INITIAL_SCORE = 0;
 // Score needed to win
@@ -19,25 +18,24 @@ const SCORE_DISPLAY_ID = "score";
 const LIVES_DISPLAY_ID = "lives";
 
 
-
 // State Variables
 
-
 // Player's score
+let score;
 // Count of lives
-// Flag to indicate if the game is active
-
-
+let lives; 
 
 
 // Cached Elements
 
-
 // Start button element
+const startButton = document.getElementById(START_BUTTON_ID);
 // Game board element
+const gameBoard = document.getElementById(GAME_BOARD_ID);
 // Score display element
+const scoreDisplay = document.getElementById(SCORE_DISPLAY_ID);
 // Lives display element
-
+const livesDisplay = document.getElementById(LIVES_DISPLAY_ID);
 
 
 
